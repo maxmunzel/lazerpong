@@ -9,10 +9,10 @@ function Start () {
 
 function Update () {
 	var pad = GetComponent("Rigidbody2D");
-	if (!stop && Input.GetKey(upkey)){
+	if ((!stop || transform.position.y < 0) && Input.GetKey(upkey)){ //voo
 		pad.velocity.y = speed;
 	}
-	else if(!stop && Input.GetKey(downkey)){
+	else if((!stop || transform.position.y > 0) && Input.GetKey(downkey)){ //doo
 		pad.velocity.y = -speed;
 	}	else if (!stop) {
 		pad.velocity.y = 0;
@@ -27,11 +27,11 @@ function OnTriggerEnter2D(trigger){
 	else{
 		Debug.Log("exot");
 		stop = true;
-		pad.velocity.y *= -1;
+		pad.velocity.y = 0;
 	}
 }
 function OnTriggerExit2D(trigger){
-	if (trigger.gameObject.name == "catch"){
+	if (trigger.gameObject.name == "cam"){
 	stop = false;
 	}
 }
