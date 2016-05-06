@@ -1,6 +1,12 @@
-﻿public var speed :int;
+
+public var initSpeed :float = 3;
+public var initX :float = 0.0;
+public var initY :float = 0.0;
+var speed :float;
 function Start () {
+	speed = initSpeed;
 	var r2d = GetComponent("Rigidbody2D");
+	transform.position = new Vector2(initX, initY);
 	r2d.velocity.x = speed;
 	r2d.velocity.y = speed;
 }
@@ -26,5 +32,17 @@ function OnTriggerEnter2D(trigger){
 }
 
 function OnBecameInvisible(){
-//	Inistiate
+	UpdateScore();
+	if (IsGameOver()){
+
+	} else {
+		yield WaitForSeconds(2);
+		Start();
+	}
+}
+function IsGameOver() :boolean{
+	return false; //TODO implement logic
+}
+function UpdateScore(){
+	return; //TODO implement score
 }
