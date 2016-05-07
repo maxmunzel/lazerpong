@@ -4,9 +4,11 @@ public var initX :float = 0.0;
 public var initY :float = 0.0;
 var speed :float;
 function Start () {
-	speed = initSpeed;
 	var r2d = GetComponent("Rigidbody2D");
+ 	r2d.velocity = Vector2.zero;
+	speed = initSpeed;
 	transform.position = new Vector2(initX, initY);
+	yield WaitForSeconds(2);
 	r2d.velocity.x = speed;
 	r2d.velocity.y = speed;
 }
@@ -25,6 +27,11 @@ function OnTriggerEnter2D(trigger){
 			break;
 		case "cam":
 			r2d.velocity.y = -r2d.velocity.y;
+			break;
+		case "bullet(Clone)":
+			r2d.velocity.x *= -1;
+			speed *= -1;
+			Destroy(trigger.gameObject);
 			break;
 		default:
 		Debug.Log("Unhandled ball collision");

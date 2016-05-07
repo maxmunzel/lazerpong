@@ -30,13 +30,13 @@ function OnTriggerEnter2D(trigger){
 	var pad = GetComponent("Rigidbody2D");
 	switch (trigger.gameObject.name) {
 		case "Ball":
-			speed *= 1.05;
+			speed *= Mathf.pow(1.05,2);
 			break;
 		case "cam":
 			stop = true;
 			pad.velocity.y = 0;
 			break;
-		case "bullet(Clone)":	
+		case "bullet(Clone)":
 			break;
 		default:
 			Debug.Log("Unhandled Paddle Collision: "+trigger.gameObject.name);
