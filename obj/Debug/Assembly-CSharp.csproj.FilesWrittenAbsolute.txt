@@ -1,0 +1,17 @@
+/Users/littlebird/Desktop/lazerpong/Temp/bin/Debug/Assembly-CSharp.dll.mdb
+/Users/littlebird/Desktop/lazerpong/Temp/bin/Debug/Assembly-CSharp.dll
+/Users/littlebird/Desktop/lazerpong/obj/Debug/Assembly-CSharp.dll
+/Users/littlebird/Desktop/lazerpong/obj/Debug/Assembly-CSharp.dll.mdb
+/Users/littlebird/Desktop/lazerpong/Temp/bin/Debug/UnityEngine.dll
+/Users/littlebird/Desktop/lazerpong/Temp/bin/Debug/UnityEditor.dll
+/Users/littlebird/Desktop/lazerpong/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/littlebird/Desktop/lazerpong/Temp/bin/Debug/UnityEngine.Networking.dll
+/Users/littlebird/Desktop/lazerpong/Temp/bin/Debug/Mono.Cecil.dll
+/Users/littlebird/Desktop/lazerpong/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/littlebird/Desktop/lazerpong/Temp/bin/Debug/Unity.DataContract.dll
+/Users/littlebird/Desktop/lazerpong/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/littlebird/Desktop/lazerpong/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Users/littlebird/Desktop/lazerpong/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Users/littlebird/Desktop/lazerpong/Temp/bin/Debug/Unity.CecilTools.dll
+/Users/littlebird/Desktop/lazerpong/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/Users/littlebird/Desktop/lazerpong/Temp/bin/Debug/Mono.Cecil.Mdb.dll

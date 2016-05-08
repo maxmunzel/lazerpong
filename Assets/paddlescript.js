@@ -2,7 +2,7 @@
 public var upkey :String;
 public var downkey :String;
 public var firekey :String;
-public var speed :int;
+public var speed :float;
 public var bullet :GameObject;
 public var firerate = 60;
 var lastShotFired :float;
@@ -30,7 +30,9 @@ function OnTriggerEnter2D(trigger){
 	var pad = GetComponent("Rigidbody2D");
 	switch (trigger.gameObject.name) {
 		case "Ball":
-			speed *= Mathf.pow(1.05,2);
+			speed = Mathf.Abs(trigger.attachedRigidbody.velocity.x)*1.5*transform.localScale.x;
+			var audio: AudioSource = GetComponent.<AudioSource>();
+			audio.Play();
 			break;
 		case "cam":
 			stop = true;

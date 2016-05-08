@@ -9,7 +9,7 @@ function Start () {
 	} else {
 		GetComponent("SpriteRenderer").sprite = blue;
 	}
-	bullet = GetComponent("Rigidbody2D");
+	var bullet = GetComponent("Rigidbody2D");
 	bullet.velocity.x = speed;
 }
 

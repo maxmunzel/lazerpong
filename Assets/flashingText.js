@@ -1,9 +1,11 @@
 ﻿#pragma strict
 public var speed :float;
 private var last :float;
-var visible :boolean = true;
+private var visible :boolean = true;
+private var posX :float;
 function Start () {
   last = Time.time;
+  posX = transform.position.x;
 }
 
 function Update () {
@@ -14,11 +16,11 @@ function Update () {
 }
 function Blink(){
   if (visible){
-    transform.localScale = Vector3.zero;
+    transform.position.x = 10;
     visible = false;
   }
   else {
-    transform.localScale = Vector3(1,1,1);
+    transform.position.x = posX;
     visible = true;
   }
 }

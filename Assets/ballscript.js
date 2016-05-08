@@ -2,6 +2,7 @@
 public var initSpeed :float = 3;
 public var initX :float = 0.0;
 public var initY :float = 0.0;
+public var scoreGUI :GameObject;
 var speed :float;
 function Start () {
 	var r2d = GetComponent("Rigidbody2D");
@@ -39,17 +40,12 @@ function OnTriggerEnter2D(trigger){
 }
 
 function OnBecameInvisible(){
-	UpdateScore();
-	if (IsGameOver()){
-
-	} else {
+		if (transform.position.x < 0){
+			scoreGUI.SendMessage("PointForPlayerTwo");
+		}
+		else {
+			scoreGUI.SendMessage("PointForPlayerOne");
+		}
 		yield WaitForSeconds(2);
 		Start();
-	}
-}
-function IsGameOver() :boolean{
-	return false; //TODO implement logic
-}
-function UpdateScore(){
-	return; //TODO implement score
 }
